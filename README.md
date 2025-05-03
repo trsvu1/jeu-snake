@@ -1,104 +1,88 @@
-# Snake Game (Snike)
+# 🐍 Snike - Terminal Snake Game
 
-## Project Description
+Welcome to **Snike**, a classic Snake game built in **C** and playable directly from your terminal!  
+This version adds fun gameplay mechanics and includes features like auto mode, adjustable speeds, and game saving functionality.
 
-Snike is a classic Snake game implemented in C. In this project, the player controls a snake that moves around the screen to collect apples. Each time the snake eats an apple, it grows longer. The game ends if the snake collides with itself or the walls. The game includes three modes: **manual control** and two levels of **automatic control** (slow and fast).
+---
 
-The game is designed for terminal environments and uses UNIX system calls to handle input and output. The game logic and rendering are implemented using standard C libraries.
+## 🚀 Features
 
-## Features
+- 🎮 Classic Snake mechanics
+- 🍎 Eat 3 apples to grow
+- 🧱 Collision detection (walls & self)
+- 💾 Save and load functionality (planned)
+- 🧠 Auto-play mode with two speeds
+- 🖥️ Works on macOS and Linux terminals
 
-- **3 modes of play:**
-  - **Manual Mode:** You control the snake using keyboard inputs (`WASD` keys).
-  - **Automatic Modes:** The snake moves automatically with two speeds, slow and fast.
-  
-- **Snake Growth:** The snake grows after eating apples.
-- **Collision Detection:** The game ends if the snake hits the wall or itself.
-- **Apple Generation:** Apples are generated at random locations on the screen.
-- **Score Tracking:** Displays score based on the number of apples eaten.
-  
-## How to Use
+---
 
-### Controls
+## 📦 Files Structure
 
-- **Manual Mode:**
-  - Use the `W`, `A`, `S`, `D` keys to control the snake (Up, Left, Down, Right).
-  
-- **Automatic Mode:**
-  - The game will automatically move the snake. You can switch between fast and slow modes.
+- `main.c` – Main game loop
+- `snike.c` – Core game logic (drawing, movement, collisions)
+- `snike.h` – Header file with data structures and function declarations
 
-### Modes
+---
 
-- **Manual Mode (default)**: The snake is controlled by the user via the keyboard.
-- **Auto Fast Mode**: The snake moves at a fast speed automatically.
-- **Auto Slow Mode**: The snake moves at a slower speed automatically.
+## ⚙️ Installation & Compilation
 
-### Game Over
+### ✅ Prerequisites
 
-- The game will end when the snake collides with itself or the wall.
-- The score is displayed at the end.
+- A C compiler like `gcc`
+- Works on macOS or Linux terminal (uses `termios` & `unistd`)
 
-## Installation
+### 🧪 Compile the project
 
-### Prerequisites
+```bash
+gcc main.c snike.c -o snike
+```
 
-- A UNIX-based operating system (Linux/macOS).
-- GCC (GNU Compiler Collection) installed for compiling C programs.
+### ▶️ Run the game
 
-### Steps to Install
+```bash
+./snike
+```
 
-1. **Clone the repository** (or download the source files):
+---
 
-   ```bash
-   git clone https://your-repository-url.git
-   cd snike
-   ```
+## 🎮 Controls
 
-2. **Compile the program**:
+Use the following keys to play:
 
-   If you have `main.c`, `snike.c`, and `snike.h` files in the same directory, you can compile them using GCC:
+- `W` – Move Up
+- `S` – Move Down
+- `A` – Move Left
+- `D` – Move Right
 
-   ```bash
-   gcc -o snike main.c snike.c
-   ```
+Press any of these keys during the game to change direction.
 
-3. **Run the program**:
+---
 
-   After compiling, you can run the game using:
+## 🛠️ Methods Used
 
-   ```bash
-   ./snike
-   ```
+- `termios.h` & `fcntl.h` for keyboard input without Enter
+- `usleep()` from `unistd.h` for timing/speed
+- Simple `printf` drawing with ANSI escape codes
+- Enum-based direction and game mode control
 
-## Methods Used
+---
 
-### `snike.h`
+## 💡 Future Improvements
 
-- **`initGame()`**: Initializes the game state.
-- **`drawGame()`**: Renders the game.
-- **`moveSnake()`**: Updates snake position.
-- **`checkCollision()`**: Ends game on collision.
-- **`generateApples()`**: Creates apples randomly.
-- **`isApple()`**: Checks if apple is at a location.
-- **`updateDirection()`**: Updates direction from input.
-- **`kbhit()` / `getch()`**: Non-blocking input.
+- ✅ Auto mode (slow/fast)
+- ✅ Unix-compatible `getch()` and `kbhit()`
+- ⏳ Add save/load functionality with files
+- 🔊 Add optional sound feedback (beep)
+- 🎨 Better UI/UX in terminal
 
-### `snike.c`
+---
 
-Contains the implementations of game functions.
+## 🧠 Author & License
 
-### `main.c`
+Created by trsvu1 for classic games.  
+Free to use, modify, and learn from.
 
-Handles the main game loop and mode selection.
+License: MIT
 
-## Contributing
-
-If you would like to contribute to this project, feel free to fork the repository, make changes, and submit a pull request. Ensure that you test your changes thoroughly.
-
-## License
-
-This project is licensed under the trsvu1 License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Implemented using C programming language and standard libraries.
+---
+Enjoy playing **Snike** and improving your C programming! 🐍
