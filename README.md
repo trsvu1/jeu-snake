@@ -1,43 +1,43 @@
-# 🐍 Snike - Terminal Snake Game
+# 🐍 Snike - Jeu du Serpent en Terminal
 
-Welcome to **Snike**, a classic Snake game built in **C** and playable directly from your terminal!  
-This version adds fun gameplay mechanics and includes features like auto mode, adjustable speeds, and game saving functionality.
-
----
-
-## 🚀 Features
-
-- 🎮 Classic Snake mechanics
-- 🍎 Eat 3 apples to grow
-- 🧱 Collision detection (walls & self)
-- 💾 Save and load functionality (planned)
-- 🧠 Auto-play mode with two speeds
-- 🖥️ Works on macOS and Linux terminals
+Bienvenue sur **Snike**, une version classique du jeu Snake développée en **C** et jouable directement depuis votre terminal !  
+Cette version intègre des mécaniques de jeu amusantes ainsi que des fonctionnalités comme un mode automatique, des vitesses ajustables, et la possibilité de sauvegarder la partie.
 
 ---
 
-## 📦 Files Structure
+## 🚀 Fonctionnalités
 
-- `main.c` – Main game loop
-- `snike.c` – Core game logic (drawing, movement, collisions)
-- `snike.h` – Header file with data structures and function declarations
+- 🎮 Mécaniques classiques du jeu Snake
+- 🍎 Mangez 3 pommes pour grandir
+- 🧱 Détection de collisions (murs et auto-collision)
+- 💾 Fonctionnalité de sauvegarde/chargement (prévue)
+- 🧠 Mode de jeu automatique avec deux vitesses
+- 🖥️ Fonctionne sur terminaux macOS et Linux
 
 ---
 
-## ⚙️ Installation & Compilation
+## 📦 Structure des fichiers
 
-### ✅ Prerequisites
+- `main.c` – Boucle principale du jeu
+- `snike.c` – Logique du jeu (dessin, déplacement, collisions)
+- `snike.h` – Fichier d'en-tête avec les structures de données et déclarations de fonctions
 
-- A C compiler like `gcc`
-- Works on macOS or Linux terminal (uses `termios` & `unistd`)
+---
 
-### 🧪 Compile the project
+## ⚙️ Installation et Compilation
+
+### ✅ Prérequis
+
+- Un compilateur C comme `gcc`
+- Fonctionne sous terminal macOS ou Linux (utilise `termios` et `unistd`)
+
+### 🧪 Compiler le projet
 
 ```bash
 gcc main.c snike.c -o snike
 ```
 
-### ▶️ Run the game
+### ▶️ Lancer le jeu
 
 ```bash
 ./snike
@@ -45,44 +45,45 @@ gcc main.c snike.c -o snike
 
 ---
 
-## 🎮 Controls
+## 🎮 Contrôles
 
-Use the following keys to play:
+Utilisez les touches suivantes pour jouer :
 
-- `W` – Move Up
-- `S` – Move Down
-- `A` – Move Left
-- `D` – Move Right
+- `W` – Haut
+- `S` – Bas
+- `A` – Gauche
+- `D` – Droite
 
-Press any of these keys during the game to change direction.
-
----
-
-## 🛠️ Methods Used
-
-- `termios.h` & `fcntl.h` for keyboard input without Enter
-- `usleep()` from `unistd.h` for timing/speed
-- Simple `printf` drawing with ANSI escape codes
-- Enum-based direction and game mode control
+Appuyez sur ces touches pendant la partie pour changer la direction du serpent.
 
 ---
 
-## 💡 Future Improvements
+## 🛠️ Méthodes utilisées
 
-- ✅ Auto mode (slow/fast)
-- ✅ Unix-compatible `getch()` and `kbhit()`
-- ⏳ Add save/load functionality with files
-- 🔊 Add optional sound feedback (beep)
-- 🎨 Better UI/UX in terminal
+- `termios.h` et `fcntl.h` pour la gestion du clavier sans appuyer sur Entrée
+- `usleep()` de `unistd.h` pour la temporisation
+- Affichage avec `printf` et codes ANSI d’échappement
+- Utilisation d’enums pour les directions et les modes de jeu
+
+---
+
+## 💡 Améliorations futures
+
+- ✅ Mode automatique (lent/rapide)
+- ✅ `getch()` et `kbhit()` compatibles Unix
+- ⏳ Sauvegarde et chargement de partie via fichiers
+- 🔊 Ajout de sons optionnels (bip)
+- 🎨 Meilleure interface/expérience utilisateur en terminal
 
 ---
 
-## 🧠 Author & License
+## 🧠 Auteur & Licence
 
-Created by trsvu1 for classic games.  
-Free to use, modify, and learn from.
+Créé par **trsvu1**, passionné de jeux classiques.  
+Libre d'utilisation, de modification et d'apprentissage.
 
-License: MIT
+Licence : MIT
 
 ---
-Enjoy playing **Snike** and improving your C programming! 🐍
+
+Amusez-vous bien avec **Snike** et améliorez votre programmation en C ! 🐍
